@@ -1,16 +1,14 @@
 import wikipediaapi
 
 def print_paragraphs(page):
-    """Печатает параграфы статьи."""
-    print(f"\nСтатья: {page.title}\n")
+        print(f"\nСтатья: {page.title}\n")
     for section in page.sections:
         print(section.title)
         print(section.text)
         print("-" * 40)
 
 def main():
-    # Укажите пользовательский агент
-    user_agent = "MyWikiApp/1.0 (https://example.com; your_email@example.com)"
+        user_agent = "MyWikiApp/1.0 (https://example.com; your_email@example.com)"
     wiki_wiki = wikipediaapi.Wikipedia(language='ru', user_agent=user_agent)
 
     try:
